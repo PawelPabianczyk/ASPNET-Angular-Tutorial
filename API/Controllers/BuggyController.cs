@@ -2,6 +2,7 @@ using API.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using API.Entities;
+using System;
 
 namespace API.Controllers
 {
@@ -26,7 +27,7 @@ namespace API.Controllers
         {
             var thing = _context.Users.Find(-1);
 
-            if(thing == null) return NotFound();
+            if (thing == null) return NotFound();
 
             return Ok(thing);
         }
