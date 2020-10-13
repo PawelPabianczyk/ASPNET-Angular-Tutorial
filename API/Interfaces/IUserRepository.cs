@@ -4,7 +4,7 @@ using API.Entities;
 
 namespace API.Interfaces
 {
-    public class IUserRepository
+    public interface IUserRepository
     {
         void Update(AppUser user);
         Task<bool> SaveAllAsync();
